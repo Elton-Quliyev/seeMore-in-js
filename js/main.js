@@ -1,3 +1,5 @@
+//active classi secen
+
 var header = document.querySelector(".tabs")
 var btns = header.getElementsByClassName("tab");
 for (var i = 0; i < btns.length; i++) {
@@ -19,7 +21,7 @@ var container = document.querySelector(".container")
 var array = [
   {
     title: "Full Stack Web Developer",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate asperiores ex ad magnam consequuntur illum corporis distinctio maxime, aspernatur at expedita voluptatum quae? Officiis blanditiis explicabo doloremque unde harum aliquam totam laboriosam dicta quos. Ipsum sint doloremque esse repellat, nulla alias blanditiis hic eveniet rem ullam sapiente excepturi facilis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptate asperiores ex ad magnam consequuntur illum corporis distinctio maxime, aspernatur at expedita voluptatum quae? Officiis blanditiis explicaboLorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor pariatur, harum impedit, nemo unde commodi animi perspiciatis dignissimos voluptas cupiditate, nesciunt praesentium sunt minima! Laboriosam, ut.",
+    text: "Azərbaycan və ya rəsmi adı ilə Azərbaycan Respublikası — Şərqi Avropa və Qərbi Asiyanın sərhəddində yerləşən transkontinental ölkə. Azərbaycan Xəzər dənizi hövzəsinin qərbində, Cənubi Qafqazda yerləşir. Şimaldan Rusiya (Dağıstan),[7] şimal-qərbdən Gürcüstan, qərbdən Ermənistan, cənub-qərbdən Türkiyə və cənubdan İran ilə həmsərhəddir.[8] Azərbaycanın anklavı olan Naxçıvan Muxtar Respublikası Ermənistanla şimal-şərqdə, İranla qərbdə və Türkiyə ilə şimal-qərbdən həmsərhəddir. Azərbaycan ərazisinin bir hissəsi (Dağlıq Qarabağ bölgəsi və ona bitişik 7 inzibati rayon) 1988–1994-cü illərdə Ermənistan tərəfindən işğal olunmuş və burda heç bir ölkə tərəfindən tanınmayan qondarma Dağlıq Qarabağ Respublikası yaradılmışdır.[9] Uzunsürən sülh danışıqları nəticəsiz qalmış və 2020-ci il 27 sentyabrda Azərbaycan Respublikası Silahlı Qüvvələri tərəfindən əks-hücum əməliyyatı ilə torpaqların bir hissəsi azad edilmiş və 10 noyabr Bakı vaxtı ilə 01:00-da imzalanan üçtərəfli bəyanat ilə başa çatmışdır. Dövlət sərhədləri cənubdan İranla 765 km, Türkiyə ilə 15, şimaldan Rusiya ilə 391 km, şimal-qərbdən Gürcüstan ilə 471 km, qərbdən Ermənistan ilə 1007 km həmsərhəddir.[10][11][12][13] Onun 825 km-i su sərhəddidir. Sahil xəttinin uzunluğu 713 km-dir.[12] Azərbaycanın Xəzər dənizi sektorunda həmçinin Türkmənistan, Qazaxıstan, İran və Rusiya ilə sərhədə malikdir .",
     name : "TOMMY",
     date : "December 2015 - Present"
   },
@@ -35,7 +37,7 @@ var array = [
     name : "CUKER",
     date : "November 2017 - Present"
   }
-];
+]; 
 
 function hansiObyekt(name){   //burda funkisiyanin icine tittlenide texdide vere bilerdim ama basim garismasin deye butun objectlere name verdim
 
@@ -47,27 +49,6 @@ function hansiObyekt(name){   //burda funkisiyanin icine tittlenide texdide vere
   const selectedObject = array.find(obyektsecen)
   //bu hisse obyektlerin hansinin hansi oldugunu secendir. find, objecte şert verib secendir ve burada yoxlayirki senin verdiyin name ile eyni olan bir name vami? varsa hemin obyekti sececek eyer ele bisey yoxdusada undefined olacaq
   
-
-
-
-
-  
-  
-
-  // const textArray = selectedObject.text.split(" ") //bosluqsuz array
-  // const umumiText = selectedObject.text.textContent
-  // console.log(umumiText )
-
-  // if(textArray.length<100){
-  // console.log(textArray.length)
-
-  // btnShow.textContent = "daha azini gosder"
-
-  // }
-  // else{
-    // btnShow.textContent = "daha coxunu gosder"
-    
-  // }
   
   
   
@@ -113,58 +94,28 @@ function hansiObyekt(name){   //burda funkisiyanin icine tittlenide texdide vere
   var qisaMetn = metninIcindekiler.split(" ").slice(0 , maxSoz).join(" ");
   var gizliMetn = metninIcindekiler.split(" ").slice(maxSoz).join(" ");
   var span1 = document.createElement("span")
-  metn.appendChild(span1)
   var span2 = document.createElement("span")
   metn.appendChild(span2)
-  span2.textContent = gizliMetn
+  metn.appendChild(span1)
+  
+  span1.textContent = qisaMetn + " ..."
+
+
   span2.style.display = "none"
-  span1.textContent = qisaMetn
+  
   btnShow.addEventListener("click" , function(){
 
     if(span2.style.display == "block"){
       span2.style.display = "none"
       btnShow.textContent = "Daha coxunu gosder"
+      span1.textContent = qisaMetn + " ..."
     }
     else{
-      
       span2.style.display = "block"
       btnShow.textContent = "Daha azini gosder"
+      span1.textContent = qisaMetn + " " + gizliMetn
     }
   })
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }  
 
 
@@ -180,8 +131,6 @@ btnBidgroup.addEventListener("click" , function(){
 btnCuker.addEventListener("click" , function(){
   hansiObyekt("CUKER")
 })
-
-
 
 
 window.addEventListener('load', function() {
